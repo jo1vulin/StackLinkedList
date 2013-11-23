@@ -1,0 +1,4 @@
+E:\Repos\StackUsingLinkedList\StackUsingLinkedList\bin\Debug\StackUsingLinkedList.pdb
+E:\Repos\StackUsingLinkedList\StackUsingLinkedList\obj\Debug\StackUsingLinkedList.pdb
+E:\Repos\StackUsingLinkedList\StackUsingLinkedList\bin\Debug\StackUsingLinkedList.exe
+E:\Repos\StackUsingLinkedList\StackUsingLinkedList\obj\Debug\StackUsingLinkedList.exe
