@@ -12,9 +12,9 @@ namespace StackUsingLinkedList
         public class Elements
         {
             //clan stack-a tipa T
-            public T Element;
+            public T elementValue;
             //Svaki clan stack-a zna koji mu je prethodni clan(tipa Element) u nizu 
-            public Elements Previous;
+            public Elements previousElement;
         }
 
         private int size;
@@ -31,7 +31,7 @@ namespace StackUsingLinkedList
             size++;
             var newElement = new Elements()
             {
-                Element = elementForAdding
+                elementValue = elementForAdding
             };
 
             if (firstElement == null)
@@ -40,7 +40,7 @@ namespace StackUsingLinkedList
             }
             else
             {
-                newElement.Previous = currentElement;
+                newElement.previousElement = currentElement;
             }
             currentElement = newElement;
         }
@@ -55,22 +55,22 @@ namespace StackUsingLinkedList
             else
             {
                 size--;
-                Elements tempElement = currentElement.Previous;
+                Elements tempElement = currentElement.previousElement;
                 currentElement = tempElement;
             }
 
         }
 
 
-        //Test for adding elements to the list
-        public void ListNodes()
+        //Ispisi sve elmente
+        public void writeAllElements()
         {
-            Elements tempNode = currentElement;
+            Elements tempElement = currentElement;
 
-            while (tempNode != null)
+            while (tempElement != null)
             {
-                Console.WriteLine(tempNode.Element);
-                tempNode = tempNode.Previous;
+                Console.WriteLine(tempElement.elementValue);
+                tempElement = tempElement.previousElement;
             }
         }
     }

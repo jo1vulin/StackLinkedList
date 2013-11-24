@@ -21,7 +21,7 @@ namespace StackUsingLinkedList
             Console.WriteLine("ispis elemenata: ");
 
 
-            newStack.ListNodes();
+            newStack.writeAllElements();
 
             try
             {
@@ -33,7 +33,7 @@ namespace StackUsingLinkedList
                 newStack.removeElement();
                 newStack.removeElement();
                 Console.WriteLine("Uklonjen poslednji element. Ispisi ponovo: ");
-                newStack.ListNodes();
+                newStack.writeAllElements();
             }
             catch(InvalidOperationException exc)
             {

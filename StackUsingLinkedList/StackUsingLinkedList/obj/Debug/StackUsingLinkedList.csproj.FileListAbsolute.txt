@@ -2,3 +2,8 @@ E:\Repos\StackUsingLinkedList\StackUsingLinkedList\bin\Debug\StackUsingLinkedLis
 E:\Repos\StackUsingLinkedList\StackUsingLinkedList\obj\Debug\StackUsingLinkedList.pdb
 E:\Repos\StackUsingLinkedList\StackUsingLinkedList\bin\Debug\StackUsingLinkedList.exe
 E:\Repos\StackUsingLinkedList\StackUsingLinkedList\obj\Debug\StackUsingLinkedList.exe
+E:\Repos\StackLinkedList\StackUsingLinkedList\StackUsingLinkedList\obj\Debug\StackUsingLinkedList.exe
+E:\Repos\StackLinkedList\StackUsingLinkedList\StackUsingLinkedList\obj\Debug\StackUsingLinkedList.pdb
+E:\Repos\StackLinkedList\StackUsingLinkedList\StackUsingLinkedList\bin\Debug\StackUsingLinkedList.exe
+E:\Repos\StackLinkedList\StackUsingLinkedList\StackUsingLinkedList\bin\Debug\StackUsingLinkedList.pdb
+E:\Repos\StackLinkedList\StackUsingLinkedList\StackUsingLinkedList\obj\Debug\StackUsingLinkedList.csprojResolveAssemblyReference.cache
