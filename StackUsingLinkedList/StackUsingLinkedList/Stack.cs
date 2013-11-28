@@ -76,8 +76,8 @@ namespace StackUsingLinkedList
         
         public void clearList()
         {
-            firstElement.elementValue = null;
-            currentElement.elementValue = null;
+            firstElement = null;
+            currentElement = null;
             Count = 0;
         }
     }
