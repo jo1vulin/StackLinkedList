@@ -73,5 +73,12 @@ namespace StackUsingLinkedList
                 tempElement = tempElement.previousElement;
             }
         }
+        
+        public void clearList()
+        {
+            firstElement.elementValue = null;
+            currentElement.elementValue = null;
+            Count = 0;
+        }
     }
 }
