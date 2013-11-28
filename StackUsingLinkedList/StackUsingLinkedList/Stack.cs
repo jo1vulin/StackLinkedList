@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace StackUsingLinkedList
 {
-    public class Stack<T>
+    interface IStack<T>
+    {
+        void addElement(T element);
+        void removeElement();
+        void writeAllElements();
+        void clearList();
+    }
+    
+    public class Stack<T> : IStack<T>
     {
         //Clanovi stack-a
         public class Elements
