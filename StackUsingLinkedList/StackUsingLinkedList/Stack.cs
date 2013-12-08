@@ -36,7 +36,12 @@ namespace StackUsingLinkedList
          * topElement - in evry moment top element of stack is known
          */
         private Elements topElement;
-        
+
+        /*
+         * InvalidOperationException error message constant
+         */
+        private const string LIST_EMPTY_ERROR_MESSAGE = "List is empty";
+
 
         /*
          * Push element to stack(Last in first out). Added element is the
@@ -102,7 +107,7 @@ namespace StackUsingLinkedList
         {
             if (Count < 1)
             {
-                throw new InvalidOperationException("Lista je prazna");
+                throw new InvalidOperationException(LIST_EMPTY_ERROR_MESSAGE);
             }
         }
 
