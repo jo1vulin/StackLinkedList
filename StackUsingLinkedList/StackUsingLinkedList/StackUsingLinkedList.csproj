@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IStack.cs" />
     <Compile Include="Runner.cs" />
     <Compile Include="Stack.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

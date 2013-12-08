@@ -6,72 +6,118 @@ using System.Threading.Tasks;
 
 namespace StackUsingLinkedList
 {
-    public class Stack<T>
+    public class Stack<T> : IStack<T>
     {
-        //Clanovi stack-a
+        #region class Elements
+
+        /*
+         * Stack<T> Elements
+         */ 
         public class Elements
         {
-            //clan stack-a tipa T
+            /*
+             * Element saved in stack
+             */
             public T elementValue;
-            //Svaki clan stack-a zna koji mu je prethodni clan(tipa Element) u nizu 
+            /*
+             * Each elements has object of it's
+             * previous element
+             */
             public Elements previousElement;
         }
 
-        private int size;
+        #endregion
+
+        /*
+         * Propery Count with private set
+         */
         public int Count { get; private set; }
-        private Elements firstElement;
-        private Elements currentElement;
+        /*
+         * topElement - in evry moment top element of stack is known
+         */
+        private Elements topElement;
+        
 
-        //Dodaj novi clan
-        //ako je prvi clan null onda dodeli vrednost ovog elmenta prvom clanu
-        //ako nije prvi clan, dodaj ovom clanu Previous, trenutni element
-        //na kraju trenutnom elementu dodeli vrednost novog elementa
-        public void addElement(T elementForAdding)
+        /*
+         * Push element to stack(Last in first out). Added element is the
+         * top element of stack
+         */
+        public void Push(T elementToPushToStack)
         {
-            size++;
-            var newElement = new Elements()
+            Count++;
+            if (topElement == null)
             {
-                elementValue = elementForAdding
-            };
-
-            if (firstElement == null)
-            {
-                firstElement = newElement;
+                topElement = createElement(elementToPushToStack);
             }
             else
             {
-                newElement.previousElement = currentElement;
+                topElement = createElement(elementToPushToStack, topElement);
             }
-            currentElement = newElement;
+            
         }
 
-        //Ukloni poslednji element
-        public void removeElement()
+        /*
+         * Pop - removes and returns the object at the top of the Stack<T>. 
+         */
+        public Elements Pop()
         {
-            if (size < 1)
-            {
-                throw new InvalidOperationException("Lista je prazna");
-            }
-            else
-            {
-                size--;
-                Elements tempElement = currentElement.previousElement;
-                currentElement = tempElement;
-            }
+            verifyIfListIsEmpty();
+            Count--;
+            var result = topElement;
+            Elements tempElement = topElement.previousElement;
+            topElement = tempElement;
+            return result;
+        }
 
+        /*
+         * Return top element of the Stack<T>
+         */ 
+        public Elements Peek()
+        {
+            verifyIfListIsEmpty();
+            return topElement;
         }
 
 
-        //Ispisi sve elmente
+        /*
+         * Write all elements of Stack
+         * Used only in testing
+         * Remove from interface
+         */ 
         public void writeAllElements()
         {
-            Elements tempElement = currentElement;
+            Elements tempElement = topElement;
 
             while (tempElement != null)
             {
                 Console.WriteLine(tempElement.elementValue);
                 tempElement = tempElement.previousElement;
             }
+        }
+
+        /*
+         * Checks if list is empty. Throws exception if list is empty
+        */ 
+        private void verifyIfListIsEmpty()
+        {
+            if (Count < 1)
+            {
+                throw new InvalidOperationException("Lista je prazna");
+            }
+        }
+
+        /*
+         * Create new element. previousElement is optional parameter in case that we are creating the
+         * first element of Stack
+         */ 
+        private Elements createElement(T elementValue, Elements previousElement = null)
+        {
+            var newElement = new Elements()
+            {
+                elementValue = elementValue,
+                previousElement=previousElement
+            };
+            return newElement;
         }
     }
 }
