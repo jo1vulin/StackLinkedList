@@ -1,0 +1,7 @@
+E:\Repos\StackLinkedList\StackUsingLinkedList\UnitTestStack\bin\Debug\UnitTestStack.dll
+E:\Repos\StackLinkedList\StackUsingLinkedList\UnitTestStack\bin\Debug\UnitTestStack.pdb
+E:\Repos\StackLinkedList\StackUsingLinkedList\UnitTestStack\obj\Debug\UnitTestStack.csprojResolveAssemblyReference.cache
+E:\Repos\StackLinkedList\StackUsingLinkedList\UnitTestStack\obj\Debug\UnitTestStack.dll
+E:\Repos\StackLinkedList\StackUsingLinkedList\UnitTestStack\obj\Debug\UnitTestStack.pdb
+E:\Repos\StackLinkedList\StackUsingLinkedList\UnitTestStack\bin\Debug\StackUsingLinkedList.exe
+E:\Repos\StackLinkedList\StackUsingLinkedList\UnitTestStack\bin\Debug\StackUsingLinkedList.pdb
