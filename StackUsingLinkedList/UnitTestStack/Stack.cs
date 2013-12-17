@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StackUsingLinkedList;
 
@@ -10,13 +10,13 @@ namespace UnitTestStack
         /*
          * Push one element to empty Stack<T>,
          * verify that size of the list is now 1
-         */ 
+         */
         [TestMethod]
         public void Push_One_Element_To_Empty_Stack()
         {
             //Arrange
             int stackSize = 1;
-            Stack<int> newStack = new Stack<int>(); 
+            Stack<int> newStack = new Stack<int>();
 
             //Act
             newStack.Push(1);
@@ -47,7 +47,7 @@ namespace UnitTestStack
         /*
          * Add two elements to Stack<T> and verify that
          * the second added element is the top element
-         */ 
+         */
         [TestMethod]
         public void Push_Two_Elements_To_Empty_Stack_Verify_That_Last_Added_Is_The_Top_Element_Of_Stack()
         {
@@ -67,8 +67,26 @@ namespace UnitTestStack
         }
 
         [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException),"List is empty!")]
-        public void Peek_On_Stack_With_No_Elements()
+        public void Pop_One_Element_When_Stack_Is_Not_Empty()
+        {
+            //Arrange
+            string firstElementToAdd = "First added element";
+            string secondElementToAdd = "Second added element";
+            Stack<string> newStack = new Stack<string>();
+            newStack.Push(firstElementToAdd);
+            newStack.Push(secondElementToAdd);
+
+            //Act
+            var popedElement = newStack.Pop().elementValue;
+
+            //Assert
+            Assert.AreEqual(popedElement, secondElementToAdd);
+            Assert.AreEqual(newStack.Peek().elementValue, FirstElementToAdd);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException), "List is empty!")]
+        public void Throwing_An_Exception_When_Stack_Is_Empty()
         {
             //Arrange
             Stack<string> newStack = new Stack<string>();
@@ -76,7 +94,7 @@ namespace UnitTestStack
             //Act
             var topElementOfStack = newStack.Peek();
 
-           
+
         }
 
 
